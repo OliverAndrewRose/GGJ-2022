@@ -1,7 +1,10 @@
 extends Node
 class_name PlayerMovement
 
-export(float) var speed: float = 5000.0;
+export(float) var walk_speed: float = 5000.0;
+export(float) var run_speed: float = 10000.0;
+export(float) var speed: float = walk_speed;
+
 var current_direction: Vector2;
 onready var player_root: KinematicBody2D = get_node("../..") as KinematicBody2D;
 

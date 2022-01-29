@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/entities/player/sprites/dev_player/dev_frames.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://assets/entities/player/functions/movement/PlayerAnimator.gd" type="Script" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://assets/entities/player/functions/attack/PlayerAim.gd" type="Script" id=5]
 [ext_resource path="res://assets/entities/base/health/Health.gd" type="Script" id=6]
 [ext_resource path="res://assets/entities/weapon/WeaponProperties.gd" type="Script" id=7]
+[ext_resource path="res://assets/entities/weapon/bullet/bullet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/entities/player/sprites/crosshair/crosshair.png" type="Texture" id=9]
+[ext_resource path="res://assets/entities/player/sprites/crosshair/Crosshair.gd" type="Script" id=10]
+[ext_resource path="res://assets/maps/01_village_centre/tileset/textures/Misc/Shadow.png" type="Texture" id=11]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -15,6 +19,11 @@
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 2 )
 shape = SubResource( 1 )
+
+[node name="shadow" type="Sprite" parent="."]
+position = Vector2( 1, 15 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 11 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
@@ -28,16 +37,29 @@ script = ExtResource( 3 )
 [node name="Animator" type="Node" parent="Functions"]
 script = ExtResource( 2 )
 
-[node name="WeaponSystem" type="Node" parent="Functions"]
+[node name="WeaponSystem" type="Node2D" parent="Functions"]
 
 [node name="WeaponProperties" type="Node" parent="Functions/WeaponSystem"]
 script = ExtResource( 7 )
+damage = 10
+bullet_speed = 50
+bullet_scene = ExtResource( 8 )
 
 [node name="PlayerShoot" type="Node" parent="Functions/WeaponSystem"]
 script = ExtResource( 4 )
 
-[node name="PlayerAim" type="Node" parent="Functions/WeaponSystem"]
+[node name="PlayerAim" type="Node2D" parent="Functions/WeaponSystem"]
 script = ExtResource( 5 )
+aim_min_distance = 20
+
+[node name="aim_position" type="Node2D" parent="Functions/WeaponSystem/PlayerAim"]
+position = Vector2( 0, 23 )
+
+[node name="crosshair" type="Sprite" parent="Functions/WeaponSystem/PlayerAim/aim_position"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource( 6 )

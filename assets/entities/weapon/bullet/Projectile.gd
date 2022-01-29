@@ -3,7 +3,6 @@ class_name Projectile
 
 var damage: int = 10;
 
-
 func on_collision(body: Node2D):
 	give_damage(body);
 	pass
