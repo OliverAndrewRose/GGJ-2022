@@ -1,3 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/entities/player/sprites/dev_player/dev_frames.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://assets/entities/player/functions/movement/PlayerMovement.gd" type="Script" id=2]
+[ext_resource path="res://assets/entities/player/functions/movement/PlayerAnimator.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
 
 [node name="root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="Player"]
+position = Vector2( 1, 2 )
+shape = SubResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="Player"]
+frames = ExtResource( 1 )
+playing = true
+
+[node name="Functions" type="Node2D" parent="Player"]
+
+[node name="Movement" type="Node" parent="Player/Functions"]
+script = ExtResource( 2 )
+
+[node name="Animator" type="Node" parent="Player/Functions"]
+script = ExtResource( 3 )
