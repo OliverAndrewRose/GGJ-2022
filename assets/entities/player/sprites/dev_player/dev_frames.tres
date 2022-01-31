@@ -6,6 +6,22 @@
 atlas = ExtResource( 1 )
 region = Rect2( 32, 0, 32, 43 )
 
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 172, 32, 43 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 172, 32, 43 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 172, 32, 43 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 172, 32, 43 )
+
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 44, 32, 44 )
@@ -21,22 +37,6 @@ region = Rect2( 64, 44, 32, 44 )
 [sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 1 )
 region = Rect2( 96, 44, 32, 44 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 86, 32, 43 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 32, 86, 32, 43 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 64, 86, 32, 43 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 86, 32, 43 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
@@ -54,21 +54,21 @@ region = Rect2( 64, 129, 32, 43 )
 atlas = ExtResource( 1 )
 region = Rect2( 96, 129, 32, 43 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 172, 32, 43 )
+region = Rect2( 0, 86, 32, 43 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
-region = Rect2( 32, 172, 32, 43 )
+region = Rect2( 32, 86, 32, 43 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 64, 172, 32, 43 )
+region = Rect2( 64, 86, 32, 43 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 96, 172, 32, 43 )
+region = Rect2( 96, 86, 32, 43 )
 
 [resource]
 resource_local_to_scene = true
@@ -78,14 +78,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "walk_upward",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
 "name": "walk_downward",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
@@ -93,8 +93,8 @@ animations = [ {
 "name": "walk_right",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "walk_upward",
+"name": "walk_left",
 "speed": 5.0
 } ]

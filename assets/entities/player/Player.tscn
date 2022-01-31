@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/entities/player/sprites/dev_player/dev_frames.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://assets/entities/player/functions/movement/PlayerAnimator.gd" type="Script" id=2]
@@ -7,14 +7,39 @@
 [ext_resource path="res://assets/entities/player/functions/attack/PlayerAim.gd" type="Script" id=5]
 [ext_resource path="res://assets/entities/base/health/Health.gd" type="Script" id=6]
 [ext_resource path="res://assets/entities/weapon/WeaponProperties.gd" type="Script" id=7]
-[ext_resource path="res://assets/entities/weapon/bullet/bullet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/entities/weapon/bullet/pellets.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/entities/player/sprites/crosshair/crosshair.png" type="Texture" id=9]
 [ext_resource path="res://assets/entities/player/sprites/crosshair/Crosshair.gd" type="Script" id=10]
 [ext_resource path="res://assets/maps/01_village_centre/tileset/textures/Misc/Shadow.png" type="Texture" id=11]
+[ext_resource path="res://assets/entities/player/functions/sounds/PlayerFootsteps.gd" type="Script" id=12]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_05.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_06.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_08.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_03.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_07.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_02.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_09.wav" type="AudioStream" id=19]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_10.wav" type="AudioStream" id=20]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_01.wav" type="AudioStream" id=21]
+[ext_resource path="res://assets/sounds/Footsteps/footstep_grass_walk_04.wav" type="AudioStream" id=22]
+[ext_resource path="res://assets/entities/weapon/WeaponSounds.gd" type="Script" id=23]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Gun 18_2.wav" type="AudioStream" id=24]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Gun 18_1.wav" type="AudioStream" id=25]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Gun 18_4.wav" type="AudioStream" id=26]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Gun 18_5.wav" type="AudioStream" id=27]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Shotgun Reload 1_1.wav" type="AudioStream" id=28]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Shotgun Reload 2_1.wav" type="AudioStream" id=29]
+[ext_resource path="res://assets/sounds/Weapon/Shotgun/Shotgun Reload 3_1.wav" type="AudioStream" id=30]
+[ext_resource path="res://assets/entities/weapon/bullet/slug.tscn" type="PackedScene" id=31]
 
 [sub_resource type="CapsuleShape2D" id=1]
+height = 10.0
+
+[sub_resource type="ShaderMaterial" id=2]
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 3
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 2 )
@@ -26,6 +51,8 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 11 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
+material = SubResource( 2 )
+z_index = 2
 frames = ExtResource( 1 )
 playing = true
 
@@ -39,11 +66,35 @@ script = ExtResource( 2 )
 
 [node name="WeaponSystem" type="Node2D" parent="Functions"]
 
-[node name="WeaponProperties" type="Node" parent="Functions/WeaponSystem"]
+[node name="Weapons" type="Node" parent="Functions/WeaponSystem"]
+
+[node name="slug" type="Node" parent="Functions/WeaponSystem/Weapons"]
 script = ExtResource( 7 )
 damage = 10
-bullet_speed = 50
+bullet_speed = 750
+bullet_scene = ExtResource( 31 )
+
+[node name="WeaponSound" type="AudioStreamPlayer2D" parent="Functions/WeaponSystem/Weapons/slug"]
+script = ExtResource( 23 )
+shoot_sounds = [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ) ]
+pump_sounds = [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ]
+
+[node name="PumpSound" type="AudioStreamPlayer2D" parent="Functions/WeaponSystem/Weapons/slug/WeaponSound"]
+volume_db = -10.0
+
+[node name="buckshot" type="Node" parent="Functions/WeaponSystem/Weapons"]
+script = ExtResource( 7 )
+damage = 10
+bullet_speed = 750
 bullet_scene = ExtResource( 8 )
+
+[node name="WeaponSound" type="AudioStreamPlayer2D" parent="Functions/WeaponSystem/Weapons/buckshot"]
+script = ExtResource( 23 )
+shoot_sounds = [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ) ]
+pump_sounds = [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ]
+
+[node name="PumpSound" type="AudioStreamPlayer2D" parent="Functions/WeaponSystem/Weapons/buckshot/WeaponSound"]
+volume_db = -10.0
 
 [node name="PlayerShoot" type="Node" parent="Functions/WeaponSystem"]
 script = ExtResource( 4 )
@@ -57,9 +108,17 @@ position = Vector2( 0, 23 )
 
 [node name="crosshair" type="Sprite" parent="Functions/WeaponSystem/PlayerAim/aim_position"]
 scale = Vector2( 0.5, 0.5 )
+z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
 script = ExtResource( 10 )
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="Sounds"]
+volume_db = -20.0
+script = ExtResource( 12 )
+DEFAULT_FOOTSTEPS = [ ExtResource( 21 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 20 ) ]
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource( 6 )

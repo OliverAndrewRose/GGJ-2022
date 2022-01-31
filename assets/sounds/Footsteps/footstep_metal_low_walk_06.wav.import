@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_metal_low_walk_06.wav-233a4b087da5508161de18c0378ed212.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_metal_low_walk_06.wav"
+dest_files=[ "res://.import/footstep_metal_low_walk_06.wav-233a4b087da5508161de18c0378ed212.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

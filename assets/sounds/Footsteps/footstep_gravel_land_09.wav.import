@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_gravel_land_09.wav-db45e39eacae885e12c10edc6822a711.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_gravel_land_09.wav"
+dest_files=[ "res://.import/footstep_gravel_land_09.wav-db45e39eacae885e12c10edc6822a711.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

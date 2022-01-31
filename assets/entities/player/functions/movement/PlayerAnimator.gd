@@ -6,6 +6,7 @@ var _current_animation: String = "default";
 
 func _process(delta) -> void:
 	_process_movement_animation();
+	_process_run_animation();
 
 func _process_movement_animation() -> void:
 	var _dir: Vector2 = movement.current_direction;
@@ -38,3 +39,8 @@ func _set_player_animation(animation: String):
 	sprite.animation = animation;
 	_current_animation = animation;
 
+func _process_run_animation():
+	if movement.is_running:
+		sprite.speed_scale = 2;
+	else:
+		sprite.speed_scale = 1;

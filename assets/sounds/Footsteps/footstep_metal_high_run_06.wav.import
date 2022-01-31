@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_metal_high_run_06.wav-fed1344255b407ee87229f31fac827be.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_metal_high_run_06.wav"
+dest_files=[ "res://.import/footstep_metal_high_run_06.wav-fed1344255b407ee87229f31fac827be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

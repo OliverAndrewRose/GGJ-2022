@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_snow_slide_04.wav-5dcf2f9ab20157c5d7d6163d92f00073.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_snow_slide_04.wav"
+dest_files=[ "res://.import/footstep_snow_slide_04.wav-5dcf2f9ab20157c5d7d6163d92f00073.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_gravel_slide_07.wav-a26b44234ce6ad590eef860ee407a58f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_gravel_slide_07.wav"
+dest_files=[ "res://.import/footstep_gravel_slide_07.wav-a26b44234ce6ad590eef860ee407a58f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

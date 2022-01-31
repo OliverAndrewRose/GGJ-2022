@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_snow_walk_light_12.wav-0b34e460bb33cd18dfed43ea55f0acbf.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_snow_walk_light_12.wav"
+dest_files=[ "res://.import/footstep_snow_walk_light_12.wav-0b34e460bb33cd18dfed43ea55f0acbf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

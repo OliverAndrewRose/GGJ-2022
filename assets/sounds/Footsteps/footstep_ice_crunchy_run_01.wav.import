@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_ice_crunchy_run_01.wav-3e86a32e93a6b2af71e07ff387897212.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_ice_crunchy_run_01.wav"
+dest_files=[ "res://.import/footstep_ice_crunchy_run_01.wav-3e86a32e93a6b2af71e07ff387897212.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

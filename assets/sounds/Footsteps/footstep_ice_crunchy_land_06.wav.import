@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_ice_crunchy_land_06.wav-a5c735ecb9f3f892271478f15b70e6c8.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_ice_crunchy_land_06.wav"
+dest_files=[ "res://.import/footstep_ice_crunchy_land_06.wav-a5c735ecb9f3f892271478f15b70e6c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

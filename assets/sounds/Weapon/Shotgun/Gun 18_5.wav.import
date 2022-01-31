@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gun 18_5.wav-15b6ef37a1fb9a8a2d3f16d634a924ad.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Weapon/Shotgun/Gun 18_5.wav"
+dest_files=[ "res://.import/Gun 18_5.wav-15b6ef37a1fb9a8a2d3f16d634a924ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

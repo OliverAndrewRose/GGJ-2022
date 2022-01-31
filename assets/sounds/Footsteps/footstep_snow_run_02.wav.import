@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_snow_run_02.wav-29a39e45c650c3563bb22060c0260053.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_snow_run_02.wav"
+dest_files=[ "res://.import/footstep_snow_run_02.wav-29a39e45c650c3563bb22060c0260053.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

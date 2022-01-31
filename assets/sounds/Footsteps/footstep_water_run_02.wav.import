@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_water_run_02.wav-83f4aa6a62d0e9926bd57fc830c18c62.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_water_run_02.wav"
+dest_files=[ "res://.import/footstep_water_run_02.wav-83f4aa6a62d0e9926bd57fc830c18c62.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

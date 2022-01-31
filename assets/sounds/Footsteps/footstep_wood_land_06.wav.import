@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_wood_land_06.wav-bb2585f1af376184e1ff86fb32a638ee.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_wood_land_06.wav"
+dest_files=[ "res://.import/footstep_wood_land_06.wav-bb2585f1af376184e1ff86fb32a638ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

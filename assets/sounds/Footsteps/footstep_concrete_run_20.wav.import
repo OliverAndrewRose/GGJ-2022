@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_concrete_run_20.wav-5359d4e2bb9f740fa471047a5da06a69.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Footsteps/footstep_concrete_run_20.wav"
+dest_files=[ "res://.import/footstep_concrete_run_20.wav-5359d4e2bb9f740fa471047a5da06a69.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
